@@ -560,18 +560,18 @@ Người bán call luôn giao dịch **cùng chiều đám đông**: giá tăng 
 - **Tháng tệ nhất bớt lỗ** ở hầu hết thiết kế, nhưng đó là **trùng hợp của lịch sử**, không phải lợi ích của ràng buộc: với thiết kế 100% tháng tệ nhất là 5/2022, và phiên sau phiên kịch trần 17/05/2022 FPT giảm 2%, nên lệnh mua bị chặn hôm đó vô tình tránh được một khoản lỗ. Theo thống kê ở trên, thường thì ngược lại.
 - FPT chỉ có 46 phiên kịch trần/sàn từ 2010 (1,1% số phiên). Mã có vol cao hơn sẽ chịu ảnh hưởng nhiều hơn.
 
-### 6.5 Vì sao book bảo toàn 100% trơn như vậy
+### 6.5 Vì sao P&L của book bảo toàn 100% ổn định, ít dao động
 
-Book thiết kế 100% · 3 tháng có 95,5% số tháng lãi và tháng tệ nhất chỉ −4,2tr. Lý do:
+Trên biểu đồ book P&L, đường của thiết kế 100% · 3 tháng đi lên gần như thẳng, hầu như không có nhịp giảm: 95,5% số tháng có lãi, tháng tệ nhất chỉ −4,2tr, max drawdown −5,2tr. Lý do:
 
 1. **Option nhỏ so với margin.** Participation khoảng 13% nên option chỉ trị giá 0,74tr/note, trong khi margin là 0,5tr/note. Một note tệ phải mất hơn margin mới thành lỗ; note tệ nhất chỉ −1,13tr.
 2. **Bậc thang margin.** Mỗi 5 phiên một note mới được bán và margin 0,5tr được ghi nhận ngay ngày bán. Dòng lãi đều đặn này (khoảng 50 note/năm) che đi phần lớn dao động của hedge P&L.
 3. **Đa dạng hóa theo thời gian.** 12–13 note sống cùng lúc, mỗi note có strike, delta và gamma khác nhau, nên các cú giật giá không đánh vào tất cả note như nhau.
 4. **Netting.** Lệnh hedge của các note bù trừ nhau, tiết kiệm khoảng 18% phí.
 
-Các điểm cần lưu ý khi đọc độ trơn này:
+Mức ổn định này cần đọc với các lưu ý sau, vì một phần đến từ cách ghi nhận chứ không hẳn do rủi ro thấp:
 
-- **Margin ghi nhận lúc bán.** Book ghi margin ngay ngày bán, trước khi rủi ro của note diễn ra; độ trơn một phần đến từ quy ước kế toán này.
+- **Margin ghi nhận lúc bán.** Book ghi margin ngay ngày bán, trước khi rủi ro của note diễn ra. Đường P&L vì vậy đi lên đều hơn so với khi margin được ghi nhận dần trong kỳ hạn.
 - **Option được mark theo chính pricing vol của note**, không theo vol thị trường hiện tại (không có thị trường đó). Nếu mark theo vol hiện tại, book sẽ dao động mạnh hơn khi vol nhảy, dù tổng P&L lúc đáo hạn không đổi.
 - **Chỉ một lịch sử FPT.** Kết quả là một đường đi duy nhất của một cổ phiếu.
 - **Sự ổn định này có cái giá ở phía khách:** cùng thiết kế đó chỉ 38% khách hơn gửi tiết kiệm và 34% chỉ nhận lại gốc.
